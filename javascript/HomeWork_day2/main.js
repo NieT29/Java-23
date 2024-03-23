@@ -70,5 +70,5 @@ let products = [
     console.log("\n9. Sắp xếp giỏ hàng theo count giảm dần:", products);
 
 // 10. Lấy ra 2 sản phẩm bất kỳ trong giỏ hàng
-    let randomProducts = products.slice(0, 2);
+    let randomProducts = products.sort(() => Math.random() - 0.5).slice(0, 2);
     console.log("\n10. Lấy ra 2 sản phẩm bất kỳ trong giỏ hàng:", randomProducts);
