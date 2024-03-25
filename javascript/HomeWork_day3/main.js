@@ -26,7 +26,7 @@ const list = document.getElementById("list")
 // 1.Thêm 3 thẻ <li> có nội dung Item 8, Item 9, Item 10 vào cuối danh sách
 for (let i = 8; i <= 10; i++) {
     const newItem = document.createElement("li")
-    newItem.innerText = "Item" + i;
+    newItem.innerText = "Item " + i;
     list.appendChild(newItem)
 }
 
