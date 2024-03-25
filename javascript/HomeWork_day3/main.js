@@ -5,7 +5,7 @@ const text = document.getElementById("text");
 text.style.color = "#777";
 
 // Đặt kích thước phông chữ thành 2rem
-text.style.fontSize = "2em";
+text.style.fontSize = "2rem";
 
 // Đặt nội dung HTML thành Tôi có thể làm <em> bất cứ điều gì </em> tôi muốn với JavaScript.
 text.innerHTML = "Tôi có thể làm <em> bất cứ điều gì </em> tôi muốn với JavaScript."
