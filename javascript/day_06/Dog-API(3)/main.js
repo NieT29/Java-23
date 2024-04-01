@@ -2,28 +2,28 @@ const btn = document.getElementById("btn");
 const image = document.getElementById("image");
 const select = document.getElementById("breed-list");
 const ul = document.querySelector("ul");
-const result = document.querySelector(".result")
+const result = document.querySelector(".result");
 
 const getBreedList = async () => {
     const res = await axios.get("https://dog.ceo/api/breeds/list/all");
-    renderBreed(res.data.message)
+    renderBreed(res.data.message);
 }
 
 const renderBreed = (breedsList) => {
     for (const key in breedsList) {
-        const option = document.createElement("option")
-        option.innerText = key
-        option.value = key
-        select.appendChild(option)
+        const option = document.createElement("option");
+        option.innerText = key;
+        option.value = key;
+        select.appendChild(option);
     }
 }
 
-getBreedList()
+getBreedList();
 
 
 btn.addEventListener("click", async () => {
-    const response = await axios.get(`https://dog.ceo/api/breed/${select.value}/list`)
-    renderSubList(response.data.message)
+    const response = await axios.get(`https://dog.ceo/api/breed/${select.value}/list`);
+    renderSubList(response.data.message);
 }) 
 
 const renderSubList = (subBreedsList) => {
@@ -47,16 +47,16 @@ const renderSubList = (subBreedsList) => {
 }
 
 const renderImage = ()=>{
-    const a = document.querySelectorAll("a")
+    const a = document.querySelectorAll("a");
 
     Array.from(a).forEach(a => {
-        a.addEventListener("click",async()=>{
+        a.addEventListener("click", async () => {
             try{
-                const res = await axios.get(`https://dog.ceo/api/breed/${select.value}/${a.innerText}/images/random`)
-                image.src = res.data.message
+                const res = await axios.get(`https://dog.ceo/api/breed/${select.value}/${a.innerText}/images/random`);
+                image.src = res.data.message;
                 result.classList.remove("hide");
             }catch(err){
-               console.log(err)
+               console.log(err);
             }
         })
     })
