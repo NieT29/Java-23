@@ -179,7 +179,7 @@ btnSearch.addEventListener("click", async () => {
     }
 
     try {
-        const response = await axios.get(`${API_URL}?q=${titleSearch}`);
+        const response = await axios.get(`${API_URL}?title_like=${titleSearch}`);
         // render ra công việc được tìm kiếm
         renderTodos(response.data)
         inputSearch.value = "";
