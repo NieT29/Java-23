@@ -76,18 +76,23 @@
     },
     {
       "title": "Đá bóng",
-      "status": false,
+      "status": true,
       "id": 4
-    },
-    {
-      "title": "Nấu cơm",
-      "status": false,
-      "id": 5
     },
     {
       "title": "Đi bơi",
       "status": false,
       "id": 6
+    },
+    {
+      "title": "Nấu cơm",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "Học bài",
+      "status": false,
+      "id": 8
     }
   ]
 }
