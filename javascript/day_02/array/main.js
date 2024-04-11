@@ -15,6 +15,6 @@ console.log(number);
 let myArr = [1, 2, 3, 4, true, false, "Nguyễn Văn A"];
 console.log(myArr)
 
-const arr2 = ['b','c','a'];
+const arr2 = ['b', 'c', 'a'];
 
-console.log( arr2.sort() == arr2  )
+console.log(arr2.sort() == arr2)

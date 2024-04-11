@@ -38,7 +38,7 @@ const renderQuestion = () => {
     const currentQuestion = questions[currentQuestionIndex]
 
     // hiển thị tiêu đề
-    titleQuestionEl.innerText = `Câu ${currentQuestionIndex + 1}: ${currentQuestion.title}` 
+    titleQuestionEl.innerText = `Câu ${currentQuestionIndex + 1}: ${currentQuestion.title}`
 
     // hiển thị các lựa chọn
     let choicesHtml = ""
@@ -59,12 +59,12 @@ const btnFinish = document.getElementById("btn-finish")
 btnNext.addEventListener("click", () => {
     // kiểm tra xem người dùng đã chọn câu trả lời chưa
     const selectedChoice = document.querySelector("input[name='choice']:checked")
-    if(!selectedChoice) {
+    if (!selectedChoice) {
         alert("Bạn chưa trả lời câu hỏi")
         return
     }
     // Lưu lại đáp án người dùng chọn
-        yourAnswers.push(selectedChoice.value);
+    yourAnswers.push(selectedChoice.value);
     // Next câu hỏi
     currentQuestionIndex++;
     // khi đến câu hỏi cuối cùng thì ẩn nút Next, hiển thị nút Finish
@@ -78,7 +78,7 @@ btnNext.addEventListener("click", () => {
 btnFinish.addEventListener("click", () => {
     // kiểm tra xem người dùng đã chọn câu trả lời cuối chưa
     const selectedChoice = document.querySelector("input[name='choice']:checked")
-    if(!selectedChoice) {
+    if (!selectedChoice) {
         alert("Bạn chưa trả lời câu hỏi")
         return
     }
@@ -86,7 +86,7 @@ btnFinish.addEventListener("click", () => {
     yourAnswers.push(selectedChoice.value);
     // tính điểm
     for (let i = 0; i < questions.length; i++) {
-        if(yourAnswers[i] === questions[i].answer) {
+        if (yourAnswers[i] === questions[i].answer) {
             score++
         }
     }

@@ -33,11 +33,11 @@ const menu = [
     {
         label: "Facebook",
         url: "https://facebook.com"
-    }, 
+    },
     {
         label: "Google",
         url: "https://google.com"
-    }, 
+    },
     {
         label: "Youtube",
         url: "https://youtube.com"

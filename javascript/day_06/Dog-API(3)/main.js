@@ -24,10 +24,10 @@ getBreedList();
 btn.addEventListener("click", async () => {
     const response = await axios.get(`https://dog.ceo/api/breed/${select.value}/list`);
     renderSubList(response.data.message);
-}) 
+})
 
 const renderSubList = (subBreedsList) => {
-    ul.innerHTML = ""; 
+    ul.innerHTML = "";
 
     if (subBreedsList.length == 0) {
         const li = document.createElement("li");
@@ -46,17 +46,17 @@ const renderSubList = (subBreedsList) => {
     renderImage();
 }
 
-const renderImage = ()=>{
+const renderImage = () => {
     const a = document.querySelectorAll("a");
 
     Array.from(a).forEach(a => {
         a.addEventListener("click", async () => {
-            try{
+            try {
                 const res = await axios.get(`https://dog.ceo/api/breed/${select.value}/${a.innerText}/images/random`);
                 image.src = res.data.message;
                 result.classList.remove("hide");
-            }catch(err){
-               console.log(err);
+            } catch (err) {
+                console.log(err);
             }
         })
     })

@@ -38,6 +38,7 @@ users = [
 function filterUsersByAgeAndStatus(users) {
     return users.filter(user => user.age > 25 && user.isStatus);
 }
+
 console.log(filterUsersByAgeAndStatus(users));
 
 // Viết function truyền vào 1 mảng các object user. Trả về mảng các user có age tăng dần

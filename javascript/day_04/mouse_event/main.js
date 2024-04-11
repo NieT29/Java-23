@@ -1,15 +1,15 @@
 // document.addEventListener('click', function() {
 //     console.log('click');
 //    })
-   
+
 //    document.addEventListener('mousedown', function() {
 //     console.log('mousedown');
 //    })
-   
+
 //    document.addEventListener('mousemove', function() {
 //     console.log('mousemove');
 //    })
-   
+
 //    document.addEventListener('mouseup', function() {
 //     console.log('mouseup');
 //    })

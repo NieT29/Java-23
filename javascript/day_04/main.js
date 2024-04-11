@@ -11,7 +11,7 @@ btn2.onclick = () => {
 
 // sử dụng addEventListener
 const btn3 = document.querySelector("#btn3")
-btn3.addEventListener("click", () =>{
+btn3.addEventListener("click", () => {
     alert("xin chao cac ban 3")
 })
 
@@ -19,11 +19,11 @@ const text = document.querySelector("#text")
 
 const arrText = ["xin chao cac ban 1", "xin chao cac ban 2", "xin chao cac ban 3"]
 
-function get_random (arrText) {
-    return arrText[Math.floor((Math.random()*arrText.length))];
+function get_random(arrText) {
+    return arrText[Math.floor((Math.random() * arrText.length))];
 }
 
-function changeContent() {      
+function changeContent() {
     text.textContent = get_random(arrText)
 }
 
@@ -41,10 +41,10 @@ btn_2.onclick = () => {
 const btn_3 = document.querySelector("#btn-3")
 
 function randomColor() {
-    var r = Math.floor(Math.random() * 256); 
-    var g = Math.floor(Math.random() * 256); 
-    var b = Math.floor(Math.random() * 256); 
-    return "rgb(" + r + ", " + g + ", " + b + ")"; 
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
 btn_3.addEventListener("click", () => {

@@ -58,11 +58,13 @@ svg {
     margin-bottom: 0;
     text-transform: uppercase;
 }
+
 #counter {
     font-size: 80px;
     text-align: center;
     margin-top: 20px;
 }
+
 .btn-container {
     display: flex;
     justify-content: space-around;

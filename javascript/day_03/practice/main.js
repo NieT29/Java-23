@@ -15,9 +15,9 @@ heading.style.textTransform = "uppercase"
 //2
 const paraList = document.querySelectorAll(".para");
 
-for (let i = 0; i< paraList.length; i++) {
-  paraList[i].style.color = "blue"
-  paraList[i].style.fontSize = "20px"
+for (let i = 0; i < paraList.length; i++) {
+    paraList[i].style.color = "blue"
+    paraList[i].style.fontSize = "20px"
 }
 
 //3

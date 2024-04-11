@@ -21,11 +21,11 @@ getBreedList()
 
 btn.addEventListener("click", async () => {
     const selectedBreed = select.value;
-            try {
-                const response = await axios.get(`https://dog.ceo/api/breed/${selectedBreed}/images/random`);
-                console.log(response.data.message)
-                image.src = response.data.message;
-            } catch (error) {
-                console.log(error);
-            }
+    try {
+        const response = await axios.get(`https://dog.ceo/api/breed/${selectedBreed}/images/random`);
+        console.log(response.data.message)
+        image.src = response.data.message;
+    } catch (error) {
+        console.log(error);
+    }
 }) 

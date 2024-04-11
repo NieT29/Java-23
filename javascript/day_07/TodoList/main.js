@@ -4,7 +4,7 @@ let todos = [];
 const ulEl = document.querySelector("ul")
 const renderTodos = (todos) => {
     ulEl.innerHTML = "";
-    if(todos.length === 0) {
+    if (todos.length === 0) {
         ulEl.insertAdjacentHTML("afterbegin", "<li>Danh sách công việc trống</li>");
         return;
     }
@@ -23,25 +23,25 @@ const renderTodos = (todos) => {
                     <button onclick="deleteTodo(${todo.id})">Delete</button>
                 </li>
                 `;
-    //    if(todo.status) {
-    //         html += `
-    //         <li>
-    //             <input type="checkbox" checked>
-    //             <span class="active">${todo.title}</span>
-    //             <button>Edit</button>
-    //             <button>Delete</button>
-    //         </li>
-    //         `;
-    //    } else {
-    //         html += `
-    //         <li>
-    //             <input type="checkbox" >
-    //             <span>${todo.title}</span>
-    //             <button>Edit</button>
-    //             <button>Delete</button>
-    //         </li>
-    //         `;
-    //    }
+        //    if(todo.status) {
+        //         html += `
+        //         <li>
+        //             <input type="checkbox" checked>
+        //             <span class="active">${todo.title}</span>
+        //             <button>Edit</button>
+        //             <button>Delete</button>
+        //         </li>
+        //         `;
+        //    } else {
+        //         html += `
+        //         <li>
+        //             <input type="checkbox" >
+        //             <span>${todo.title}</span>
+        //             <button>Edit</button>
+        //             <button>Delete</button>
+        //         </li>
+        //         `;
+        //    }
     });
     ulEl.innerHTML = html;
 }
@@ -67,7 +67,7 @@ btnAdd.addEventListener("click", async () => {
     // lấy nội dung trong ô input
     const title = inputTodo.value.trim();
     // kiểm tra nội dung có rỗng không
-    if(title === "") {
+    if (title === "") {
         alert("Vui lòng nhập công việc")
         return;
     }
@@ -93,13 +93,13 @@ btnAdd.addEventListener("click", async () => {
         console.log(error)
     }
 
-    
+
 })
 
 // xóa công việc
 const deleteTodo = async (id) => {
     const confirm = window.confirm("bạn có chắc muốn xóa không");
-    if(!confirm)
+    if (!confirm)
         return;
 
     try {
@@ -121,7 +121,7 @@ const editTodo = async (id) => {
     const todo = todos.find(todo => todo.id === id)
 
     const newTitle = window.prompt("Mời bạn nhập title muốn thay đổi")
-    if(newTitle === "" || newTitle == null) {
+    if (newTitle === "" || newTitle == null) {
         alert("Không được để trống")
         return
     }
@@ -133,7 +133,7 @@ const editTodo = async (id) => {
 
     try {
         const response = await axios.put(`${API_URL}/${id}`, editTitle)
-        if(response.status === 200) {
+        if (response.status === 200) {
             todo.title = newTitle
             renderTodos(todos)
         } else {
@@ -147,7 +147,7 @@ const editTodo = async (id) => {
 // thay đổi trạng thái công việc
 const toggleStatus = async (id) => {
     const todo = todos.find(todo => todo.id === id)
-    
+
     const newStatus = {
         title: todo.title,
         status: !todo.status
@@ -155,7 +155,7 @@ const toggleStatus = async (id) => {
 
     try {
         const response = await axios.put(`${API_URL}/${id}`, newStatus)
-        if(response.status === 200) {
+        if (response.status === 200) {
             todo.status = !todo.status
             renderTodos(todos)
         } else {
@@ -164,7 +164,7 @@ const toggleStatus = async (id) => {
     } catch (error) {
         console.log
     }
-    
+
 }
 
 // tìm kiếm công việc
@@ -173,7 +173,7 @@ const inputSearch = document.getElementById("search-input-todo")
 
 btnSearch.addEventListener("click", async () => {
     const titleSearch = inputSearch.value.trim()
-    if(titleSearch === "") {
+    if (titleSearch === "") {
         alert("Vui lòng nhập công việc cần tìm kiếm")
         return;
     }
@@ -188,7 +188,6 @@ btnSearch.addEventListener("click", async () => {
     }
 
 })
-
 
 
 getAllTodos();

@@ -24,7 +24,7 @@ function renderBox() {
         boxes.appendChild(box);
         totalBox++;
         updateNumber();
-        
+
         box.addEventListener("click", () => {
             box.remove();
             totalBox--;

@@ -36,7 +36,7 @@ li1.style.color = "red"
 
 // 3.Sửa background cho thẻ <li> 3 thành màu xanh (background-color)
 const li3 = document.querySelector("#list li:nth-child(3)")
-li3.style.backgroundColor="blue"
+li3.style.backgroundColor = "blue"
 
 // 4.Remove thẻ <li> 4
 const li4 = document.querySelector("#list li:nth-child(4)")

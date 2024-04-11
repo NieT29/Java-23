@@ -3,7 +3,7 @@ let todos = [
         id: 1,
         title: "Làm bài tập về nhà",
         status: true
-    }, 
+    },
     {
         id: 2,
         title: "Đi chơi",
@@ -17,7 +17,7 @@ let todos = [
 ];
 
 const generateId = () => {
-    if(todos.length === 0) {
+    if (todos.length === 0) {
         return 1;
     }
     return Math.max(...todos.map(todo => todo.id)) + 1;
@@ -26,7 +26,7 @@ const generateId = () => {
 const ulEl = document.querySelector("ul")
 const renderTodos = (todos) => {
     ulEl.innerHTML = "";
-    if(todos.length === 0) {
+    if (todos.length === 0) {
         ulEl.insertAdjacentHTML("afterbegin", "<li>Danh sách công việc trống</li>");
         return;
     }
@@ -45,25 +45,25 @@ const renderTodos = (todos) => {
                     <button onclick="deleteTodo(${todo.id})">Delete</button>
                 </li>
                 `;
-    //    if(todo.status) {
-    //         html += `
-    //         <li>
-    //             <input type="checkbox" checked>
-    //             <span class="active">${todo.title}</span>
-    //             <button>Edit</button>
-    //             <button>Delete</button>
-    //         </li>
-    //         `;
-    //    } else {
-    //         html += `
-    //         <li>
-    //             <input type="checkbox" >
-    //             <span>${todo.title}</span>
-    //             <button>Edit</button>
-    //             <button>Delete</button>
-    //         </li>
-    //         `;
-    //    }
+        //    if(todo.status) {
+        //         html += `
+        //         <li>
+        //             <input type="checkbox" checked>
+        //             <span class="active">${todo.title}</span>
+        //             <button>Edit</button>
+        //             <button>Delete</button>
+        //         </li>
+        //         `;
+        //    } else {
+        //         html += `
+        //         <li>
+        //             <input type="checkbox" >
+        //             <span>${todo.title}</span>
+        //             <button>Edit</button>
+        //             <button>Delete</button>
+        //         </li>
+        //         `;
+        //    }
     });
     ulEl.innerHTML = html;
 }
@@ -76,7 +76,7 @@ btnAdd.addEventListener("click", () => {
     // lấy nội dung trong ô input
     const title = inputTodo.value.trim();
     // kiểm tra nội dung có rỗng không
-    if(title === "") {
+    if (title === "") {
         alert("Vui lòng nhập công việc")
         return;
     }
@@ -100,7 +100,7 @@ btnAdd.addEventListener("click", () => {
 
 const deleteTodo = (id) => {
     const confirm = window.confirm("bạn có chắc muốn xóa không");
-    if(confirm) {
+    if (confirm) {
         todos = todos.filter(todo => todo.id != id)
         renderTodos(todos);
     }
@@ -108,9 +108,9 @@ const deleteTodo = (id) => {
 
 const editTodo = (id) => {
     todos.forEach(todo => {
-        if(todo.id === id) {
+        if (todo.id === id) {
             const prompt = window.prompt("Mời bạn nhập title muốn thay đổi")
-            if(prompt === "") {
+            if (prompt === "") {
                 alert("Không được để trống")
                 return
             } else {
