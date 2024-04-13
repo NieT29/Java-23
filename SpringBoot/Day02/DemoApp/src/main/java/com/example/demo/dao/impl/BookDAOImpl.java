@@ -1,7 +1,7 @@
 package com.example.demo.dao.impl;
 
 import com.example.demo.dao.BookDAO;
-import com.example.demo.databsae.BookDB;
+import com.example.demo.database.BookDB;
 import com.example.demo.model.Book;
 import org.springframework.stereotype.Repository;
 
