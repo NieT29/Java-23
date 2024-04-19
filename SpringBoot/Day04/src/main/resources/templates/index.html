@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Trang chủ</title>
+</head>
+<body>
+<h1 >Trang chủ</h1>
+
+<h2>Thông tin user</h2>
+<ul>
+    <li th:text="'ID: ' + ${user.id}">ID</li>
+    <li th:text="|Name: ${user.name}|">Name</li>
+    <li>
+        Age: <th:block th:text="${user.age}"></th:block>
+    </li>
+    <li>
+        Status: <th:block th:text="${user.status ? 'Nam' : 'Nữ'}"></th:block>
+    </li>
+</ul>
+
+<h2>Danh sách user</h2>
+    <button>
+        <a th:href="@{/}">Tất cả</a>
+    </button>
+    <button>
+        <a th:href="@{/?status=true}">Nam</a>
+    </button>
+    <button>
+        <a th:href="@{/?status=false}">Nữ</a>
+    </button>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user, state : ${users}" th:classappend="${state.odd ? 'active' : ''}">
+            <td th:text="${user.id}">1</td>
+            <td th:text="${user.name}">Nguyễn Văn A</td>
+            <td th:text="${user.age}">24</td>
+            <td th:text="${user.status ? 'Nam' : 'Nữ'}">Nam</td>
+            <td>
+                <a th:href="@{/users/{id} (id=${user.id})}">Xem chi tiết</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
