@@ -3,7 +3,8 @@
 ## Chi tiết sản phẩm: http://localhost:8080/products/{id}
 ![Screenshot 2024-04-24 015644](https://github.com/NieT29/Java-23/assets/121416611/d662ddc5-63bd-404a-b34d-a357658e5236)
 ## Tìm kiếm sản phẩm theo keyword http://localhost:8080/search/{keyword}
-![Screenshot 2024-04-24 022313](https://github.com/NieT29/Java-23/assets/121416611/5bf097a3-eb34-40e1-8d05-73dfa31edf7a)
+![Screenshot 2024-04-24 022839](https://github.com/NieT29/Java-23/assets/121416611/61cb3a10-2461-47e3-859d-3d85a6c37d79)
+
 
 
 
