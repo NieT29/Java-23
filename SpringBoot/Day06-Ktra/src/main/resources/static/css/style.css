@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+
+.header {
+    background-color: #dfe0e0;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: rgb(224, 224, 224) solid 1px;
+}
+
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover h2{
+    color: blue;
+}
+
+.product .price {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.product .rating {
+    font-size: 15px;
+}
+
+.product img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product p {
+    margin: 5px 0
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.discountPrice {
+    color: red;
+    font-weight: bold;
+}
+
+.rating .start {
+    color: #FF9727;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-left: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #F6F6F4;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.search {
+    margin-left: 30px;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    outline: none;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #555;
+}
+
+.search input[type="text"]:focus {
+    border-color: #555;
+    box-shadow: 0 0 5px #555;
+}
+
+.back button {
+    padding: 10px 20px;
+    margin-left: 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back button:hover {
+    background-color: #555;
+}
+
+#message {
+    margin-left: 25px;
+    padding-bottom: 20px;
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
+}

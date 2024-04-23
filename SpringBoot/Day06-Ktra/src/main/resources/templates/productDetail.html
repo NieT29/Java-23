@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/styleDetailProduct.css}">
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css}"
+          rel="stylesheet"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+    <title>Chi Tiết Sản Phẩm</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Product Detail</h1>
+    </div>
+    <div class="container">
+        <div class="product" th:each="product : ${getProductById}">
+            <div class="product-img"><img  th:src="${product.thumbnail}" alt="Product Thumbnail"></div>
+            <div class="product-infor">
+                <h2 th:text="${product.name}"></h2>
+                <p class="product-des">Description: <span th:text="${product.description}"></span></p>
+                <p class="product-price">
+                    <span th:text="${product.price}"></span> $</p>
+                <p class="product-discount"> <span th:text="${product.price - product.priceDiscount}"></span> $</p>
+                <p class="product-rating">Rating:
+                    <span th:text="${product.rating}"></span>
+                    <span class="start"><i class="fa-solid fa-star"></i></span>
+                </p>
+                <button class="add">
+                    <i class="fas fa-cart-plus"></i>
+                    <span>Add to Cart</span>
+                </button>
+                <button class="back-btn">
+                    <a href="/" >Back to Home</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
