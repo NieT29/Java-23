@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 public class ProductController {
     private List<Product> products;
+
     public ProductController() {
         products = new ArrayList<>();
         products.add(new Product("1", "Iphone 11", "Mobile", 500, "Apple"));

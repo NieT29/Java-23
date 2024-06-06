@@ -12,7 +12,7 @@ import java.util.List;
 
 @Component
 //@Primary
-public class JsonFileReader implements IFileReader{
+public class JsonFileReader implements IFileReader {
 
     @Override
     public List<Book> readFile(String path) {
@@ -21,7 +21,8 @@ public class JsonFileReader implements IFileReader{
 
         try {
             // Đọc file JSON và chuyển đổi nó thành danh sách các đối tượng Book
-            return mapper.readValue(Paths.get(path).toFile(), new TypeReference<List<Book>>() {});
+            return mapper.readValue(Paths.get(path).toFile(), new TypeReference<List<Book>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -20,59 +20,59 @@ public class DemoApplication {
         List<Integer> findEvenValue = numbers.stream()
                 .filter(num -> num % 2 == 0)
                 .toList();
-        System.out.println("Giá trị chẵn trong list: "+ findEvenValue);
+        System.out.println("Giá trị chẵn trong list: " + findEvenValue);
 
         // 3. Tìm các giá trị > 5 trong list
         List<Integer> greaterThanFive = numbers.stream()
                 .filter(num -> num > 5)
                 .toList();
-        System.out.println("giá trị lớn hơn 5: "+greaterThanFive);
+        System.out.println("giá trị lớn hơn 5: " + greaterThanFive);
 
         // 4. Tìm giá trị max trong list
         int maxValue = numbers.stream()
                 .mapToInt(Integer::intValue)
                 .max()
                 .getAsInt();
-        System.out.println("giá trị lớn nhất: "+maxValue);
+        System.out.println("giá trị lớn nhất: " + maxValue);
 
         // 5. Tìm giá trị min trong list
         int minValue = numbers.stream()
                 .mapToInt(Integer::intValue)
                 .min()
                 .getAsInt();
-        System.out.println("giá trị nhỏ nhất: "+minValue);
+        System.out.println("giá trị nhỏ nhất: " + minValue);
 
         // 6. Tính tổng các phần tử của mảng
         int sum = numbers.stream()
                 .mapToInt(Integer::intValue)
                 .sum();
-        System.out.println("tổng các phần tử của mảng: "+sum);
+        System.out.println("tổng các phần tử của mảng: " + sum);
 
         // 7. Lấy danh sách các phần tử không trùng nhau
         List<Integer> distinctNumbers = numbers.stream()
                 .distinct()
                 .toList();
-        System.out.println("danh sách các phần tử không trùng nhau: "+distinctNumbers);
+        System.out.println("danh sách các phần tử không trùng nhau: " + distinctNumbers);
 
         // 8. Lấy 5 phần tử đầu tiên trong mảng
         List<Integer> firstFiveElements = numbers.stream()
                 .limit(5)
                 .toList();
-        System.out.println("5 phần tử đầu tiên trong mảng: "+firstFiveElements);
+        System.out.println("5 phần tử đầu tiên trong mảng: " + firstFiveElements);
 
         // 9. Lấy phần tử từ thứ 3 -> thứ 5
         List<Integer> elementsFrom3to5 = numbers.stream()
                 .skip(2)
                 .limit(3)
                 .toList();
-        System.out.println("phần tử từ 3-5 trong mảng: "+elementsFrom3to5);
+        System.out.println("phần tử từ 3-5 trong mảng: " + elementsFrom3to5);
 
         // 10. Lấy phần tử đầu tiên > 5
         int fistGreaterThanFive = numbers.stream()
                 .filter(number -> number > 5)
                 .findFirst()
                 .get();
-        System.out.println("phần tử đầu tiên lớn hơn 5: "+fistGreaterThanFive);
+        System.out.println("phần tử đầu tiên lớn hơn 5: " + fistGreaterThanFive);
 
         // 11. Kiểm tra xem list có phải là list chẵn hay không
         boolean isEvenList = numbers.stream()
@@ -97,13 +97,13 @@ public class DemoApplication {
         long count = numbers.stream()
                 .filter(number -> number > 5)
                 .count();
-        System.out.println("số lượng phần tử lớn hơn 5: "+count);
+        System.out.println("số lượng phần tử lớn hơn 5: " + count);
 
         // 14. Nhân đôi các phần tủ trong list và trả về list mới
         List<Integer> doubledNumbers = numbers.stream()
                 .map(number -> number * 2)
                 .toList();
-        System.out.println("danh sách phần tử sau khi nhân đôi: "+doubledNumbers);
+        System.out.println("danh sách phần tử sau khi nhân đôi: " + doubledNumbers);
 
         // 15. Kiểm tra xem list không chứa giá trị nào = 8 hay không
         boolean containsEight = numbers.stream()

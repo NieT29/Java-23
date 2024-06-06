@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface PersonService {
     List<Person> getAll();
+
     PageResponse<Person> getAll(int page, int pageSize);
 }

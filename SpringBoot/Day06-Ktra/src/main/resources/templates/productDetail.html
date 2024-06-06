@@ -14,31 +14,31 @@
     <title>Chi Tiết Sản Phẩm</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Product Detail</h1>
-    </div>
-    <div class="container">
-        <div class="product" th:each="product : ${getProductById}">
-            <div class="product-img"><img  th:src="${product.thumbnail}" alt="Product Thumbnail"></div>
-            <div class="product-infor">
-                <h2 th:text="${product.name}"></h2>
-                <p class="product-des">Description: <span th:text="${product.description}"></span></p>
-                <p class="product-price">
-                    <span th:text="${product.price}"></span> $</p>
-                <p class="product-discount"> <span th:text="${product.price - product.priceDiscount}"></span> $</p>
-                <p class="product-rating">Rating:
-                    <span th:text="${product.rating}"></span>
-                    <span class="start"><i class="fa-solid fa-star"></i></span>
-                </p>
-                <button class="add">
-                    <i class="fas fa-cart-plus"></i>
-                    <span>Add to Cart</span>
-                </button>
-                <button class="back-btn">
-                    <a href="/" >Back to Home</a>
-                </button>
-            </div>
+<div class="header">
+    <h1>Product Detail</h1>
+</div>
+<div class="container">
+    <div class="product" th:each="product : ${getProductById}">
+        <div class="product-img"><img th:src="${product.thumbnail}" alt="Product Thumbnail"></div>
+        <div class="product-infor">
+            <h2 th:text="${product.name}"></h2>
+            <p class="product-des">Description: <span th:text="${product.description}"></span></p>
+            <p class="product-price">
+                <span th:text="${product.price}"></span> $</p>
+            <p class="product-discount"><span th:text="${product.price - product.priceDiscount}"></span> $</p>
+            <p class="product-rating">Rating:
+                <span th:text="${product.rating}"></span>
+                <span class="start"><i class="fa-solid fa-star"></i></span>
+            </p>
+            <button class="add">
+                <i class="fas fa-cart-plus"></i>
+                <span>Add to Cart</span>
+            </button>
+            <button class="back-btn">
+                <a href="/">Back to Home</a>
+            </button>
         </div>
     </div>
+</div>
 </body>
 </html>

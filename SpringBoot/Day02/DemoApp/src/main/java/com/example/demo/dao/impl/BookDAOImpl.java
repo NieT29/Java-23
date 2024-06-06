@@ -33,7 +33,7 @@ public class BookDAOImpl implements BookDAO {
         BookDB.books.sort(new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {
-                return o1.getYear()-o2.getYear();
+                return o1.getYear() - o2.getYear();
             }
         });
         return BookDB.books;

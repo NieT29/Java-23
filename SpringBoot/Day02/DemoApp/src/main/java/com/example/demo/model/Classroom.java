@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Component
 public class Classroom {
-   //C1: Field based Injection
+    //C1: Field based Injection
 //    @Autowired
 //    Student student;
 //

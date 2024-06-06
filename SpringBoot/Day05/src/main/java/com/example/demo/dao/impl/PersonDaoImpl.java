@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @Repository
 public class PersonDaoImpl implements PersonDAO {
     @Override
-    public void printListPeople(List<Person> people ) {
+    public void printListPeople(List<Person> people) {
         people.stream()
                 .forEach(System.out::println);
     }
@@ -112,7 +112,7 @@ public class PersonDaoImpl implements PersonDAO {
     @Override
     public Person longestName() {
         return PersonDB.people.stream()
-                .max(Comparator.comparingInt(person ->person.getFullname().length()))
+                .max(Comparator.comparingInt(person -> person.getFullname().length()))
                 .get();
     }
 

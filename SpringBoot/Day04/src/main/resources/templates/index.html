@@ -9,49 +9,51 @@
     <title>Trang chủ</title>
 </head>
 <body>
-<h1 >Trang chủ</h1>
+<h1>Trang chủ</h1>
 
 <h2>Thông tin user</h2>
 <ul>
     <li th:text="'ID: ' + ${user.id}">ID</li>
     <li th:text="|Name: ${user.name}|">Name</li>
     <li>
-        Age: <th:block th:text="${user.age}"></th:block>
+        Age:
+        <th:block th:text="${user.age}"></th:block>
     </li>
     <li>
-        Status: <th:block th:text="${user.status ? 'Nam' : 'Nữ'}"></th:block>
+        Status:
+        <th:block th:text="${user.status ? 'Nam' : 'Nữ'}"></th:block>
     </li>
 </ul>
 
 <h2>Danh sách user</h2>
-    <button>
-        <a th:href="@{/}">Tất cả</a>
-    </button>
-    <button>
-        <a th:href="@{/?status=true}">Nam</a>
-    </button>
-    <button>
-        <a th:href="@{/?status=false}">Nữ</a>
-    </button>
+<button>
+    <a th:href="@{/}">Tất cả</a>
+</button>
+<button>
+    <a th:href="@{/?status=true}">Nam</a>
+</button>
+<button>
+    <a th:href="@{/?status=false}">Nữ</a>
+</button>
 <table>
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Status</th>
-        </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Status</th>
+    </tr>
     </thead>
     <tbody>
-        <tr th:each="user, state : ${users}" th:classappend="${state.odd ? 'active' : ''}">
-            <td th:text="${user.id}">1</td>
-            <td th:text="${user.name}">Nguyễn Văn A</td>
-            <td th:text="${user.age}">24</td>
-            <td th:text="${user.status ? 'Nam' : 'Nữ'}">Nam</td>
-            <td>
-                <a th:href="@{/users/{id} (id=${user.id})}">Xem chi tiết</a>
-            </td>
-        </tr>
+    <tr th:each="user, state : ${users}" th:classappend="${state.odd ? 'active' : ''}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.name}">Nguyễn Văn A</td>
+        <td th:text="${user.age}">24</td>
+        <td th:text="${user.status ? 'Nam' : 'Nữ'}">Nam</td>
+        <td>
+            <a th:href="@{/users/{id} (id=${user.id})}">Xem chi tiết</a>
+        </td>
+    </tr>
     </tbody>
 </table>
 

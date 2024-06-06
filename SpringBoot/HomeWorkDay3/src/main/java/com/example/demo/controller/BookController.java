@@ -39,15 +39,21 @@ public class BookController {
     // sắp xếp theo năm
     @GetMapping("/sortByYear")
     @ResponseBody
-    public List<Book> sortByYear() {return bookeService.sortBooksByYear();}
+    public List<Book> sortByYear() {
+        return bookeService.sortBooksByYear();
+    }
 
     // tìm theo keyword
     @GetMapping("/search/{keyword}")
     @ResponseBody
-    public List<Book> searchBook(@PathVariable String keyword) {return bookeService.searchBook(keyword);}
+    public List<Book> searchBook(@PathVariable String keyword) {
+        return bookeService.searchBook(keyword);
+    }
 
     // tìm theo khoảng thời gian
     @GetMapping("/startYear/{startYear}/endYear/{endYear}")
     @ResponseBody
-    public List<Book> searchBookByYear(@PathVariable int startYear, @PathVariable int endYear) {return bookeService.searchBookByYear(startYear, endYear);}
+    public List<Book> searchBookByYear(@PathVariable int startYear, @PathVariable int endYear) {
+        return bookeService.searchBookByYear(startYear, endYear);
+    }
 }

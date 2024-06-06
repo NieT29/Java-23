@@ -5,48 +5,48 @@
     <title>People</title>
 </head>
 <body>
-    <h1>Danh sách People</h1>
-    <table border="1">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Fullname</th>
-            <th>Job</th>
-            <th>Gender</th>
-            <th>City</th>
-            <th>Salary</th>
-            <th>Birthday</th>
-            <th>Children</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="person: ${pageData.getContent()}">
-            <td th:text="${person.id}">1</td>
-            <td th:text="${person.fullname}">Nguyễn Văn A</td>
-            <td th:text="${person.job}">24</td>
-            <td th:text="${person.gender}">Nam</td>
-            <td th:text="${person.city}">Nam</td>
-            <td th:text="${person.salary}">Nam</td>
-            <td th:text="${#temporals.format(person.birthday, 'dd-MM-yyyy')}">Nam</td>
-            <td th:text="${person.children.size()}">Nam</td>
-        </tr>
-        </tbody>
-    </table>
+<h1>Danh sách People</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Fullname</th>
+        <th>Job</th>
+        <th>Gender</th>
+        <th>City</th>
+        <th>Salary</th>
+        <th>Birthday</th>
+        <th>Children</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person: ${pageData.getContent()}">
+        <td th:text="${person.id}">1</td>
+        <td th:text="${person.fullname}">Nguyễn Văn A</td>
+        <td th:text="${person.job}">24</td>
+        <td th:text="${person.gender}">Nam</td>
+        <td th:text="${person.city}">Nam</td>
+        <td th:text="${person.salary}">Nam</td>
+        <td th:text="${#temporals.format(person.birthday, 'dd-MM-yyyy')}">Nam</td>
+        <td th:text="${person.children.size()}">Nam</td>
+    </tr>
+    </tbody>
+</table>
 
-    <ul style="display: flex; list-style-type: none" th:if="${pageData.getTotalPage() != 1}">
-        <li th:if="${pageData.getCurrentPage() != 1}">
-            <button><a th:href="@{/people (page=${pageData.getCurrentPage() - 1})}">Trang trước</a></button>
-        </li>
+<ul style="display: flex; list-style-type: none" th:if="${pageData.getTotalPage() != 1}">
+    <li th:if="${pageData.getCurrentPage() != 1}">
+        <button><a th:href="@{/people (page=${pageData.getCurrentPage() - 1})}">Trang trước</a></button>
+    </li>
 
-        <li th:each="number: ${#numbers.sequence(1, pageData.getTotalPage())}" >
-            <button th:styleappend="${number == pageData.getCurrentPage() ? 'background-color: red' : ''}">
-                <a th:href="@{/people (page=${number})}" th:text="${number}">1</a>
-            </button>
-        </li>
+    <li th:each="number: ${#numbers.sequence(1, pageData.getTotalPage())}">
+        <button th:styleappend="${number == pageData.getCurrentPage() ? 'background-color: red' : ''}">
+            <a th:href="@{/people (page=${number})}" th:text="${number}">1</a>
+        </button>
+    </li>
 
-        <li th:if="${pageData.getCurrentPage() != pageData.getTotalPage()}">
-            <button><a th:href="@{/people (page=${pageData.getCurrentPage() +1})}">Trang sau</a></button>
-        </li>
-    </ul>
+    <li th:if="${pageData.getCurrentPage() != pageData.getTotalPage()}">
+        <button><a th:href="@{/people (page=${pageData.getCurrentPage() +1})}">Trang sau</a></button>
+    </li>
+</ul>
 </body>
 </html>

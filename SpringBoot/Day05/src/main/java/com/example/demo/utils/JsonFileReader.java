@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 @Component
-public class JsonFileReader implements IFileReader{
+public class JsonFileReader implements IFileReader {
 
     @Override
     public List<Person> readFile(String path) {
@@ -21,7 +21,8 @@ public class JsonFileReader implements IFileReader{
         mapper.registerModule(new JavaTimeModule());
         try {
             // Đọc file JSON và chuyển đổi nó thành danh sách các đối tượng Book
-            return mapper.readValue(Paths.get(path).toFile(), new TypeReference<List<Person>>() {});
+            return mapper.readValue(Paths.get(path).toFile(), new TypeReference<List<Person>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

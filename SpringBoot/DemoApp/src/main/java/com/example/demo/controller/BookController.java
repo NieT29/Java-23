@@ -12,7 +12,8 @@ import java.util.List;
 @RequestMapping("books")
 @RestController
 public class BookController {
-    private  List<Book> books;
+    private List<Book> books;
+
     public BookController() {
         books = new ArrayList<>();
         books.add(new Book(1, "Gone with the wind", "Cuong", 1945));

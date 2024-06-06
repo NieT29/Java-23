@@ -29,11 +29,9 @@ public class DemoApplication {
         english.greet("Jonh Doe");
 
         // sử dụng lamda expression calculator
-        Calculator add = (a, b) -> a+b;
-        System.out.println("5 + 3 = "+ add.cal(5,3));
+        Calculator add = (a, b) -> a + b;
+        System.out.println("5 + 3 = " + add.cal(5, 3));
     }
-
-
 
 
 }

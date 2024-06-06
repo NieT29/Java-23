@@ -10,6 +10,7 @@ body {
     padding: 0;
     background-color: #ffffff;
 }
+
 .header {
     background-color: #dfe0e0;
     text-align: center;
@@ -31,7 +32,7 @@ body {
 
 }
 
-.product-img img{
+.product-img img {
     width: 600px;
     height: 600px;
     border-radius: 8px;
@@ -78,7 +79,7 @@ body {
     padding-bottom: 30px;
 }
 
-.product-rating .start{
+.product-rating .start {
     color: #FF9727;
 }
 

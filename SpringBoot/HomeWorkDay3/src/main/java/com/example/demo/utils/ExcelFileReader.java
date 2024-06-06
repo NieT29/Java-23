@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Component
-public class ExcelFileReader implements IFileReader{
+public class ExcelFileReader implements IFileReader {
     @Override
     public List<Book> readFile(String path) {
         System.out.println("Đọc file excel");

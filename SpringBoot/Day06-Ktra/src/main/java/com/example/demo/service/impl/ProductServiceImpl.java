@@ -12,6 +12,7 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductDAO productDAO;
+
     @Override
     public List<Product> getAll() {
         return productDAO.getAll();

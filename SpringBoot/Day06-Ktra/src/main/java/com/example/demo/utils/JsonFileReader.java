@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 @Component
-public class JsonFileReader implements IFileReader{
+public class JsonFileReader implements IFileReader {
     @Override
     public List<Product> readFile(String path) {
         System.out.println("Đọc file Json");
@@ -19,7 +19,8 @@ public class JsonFileReader implements IFileReader{
 
         mapper.registerModule(new JavaTimeModule());
         try {
-            return mapper.readValue(Paths.get(path).toFile(), new TypeReference<List<Product>>() {});
+            return mapper.readValue(Paths.get(path).toFile(), new TypeReference<List<Product>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 // @Bean phải được định nghĩa trong class được chú thích bởi @Configuration
 @SpringBootApplication
-public class  DemoApplication {
+public class DemoApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(DemoApplication.class, args);

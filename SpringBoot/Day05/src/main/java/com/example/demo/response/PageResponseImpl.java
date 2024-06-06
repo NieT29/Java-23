@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PageResponseImpl<T> implements PageResponse<T>{
+public class PageResponseImpl<T> implements PageResponse<T> {
     List<T> data;
     int currentPage;
     int pageSize;
@@ -23,7 +23,7 @@ public class PageResponseImpl<T> implements PageResponse<T>{
 
     @Override
     public List<T> getContent() {
-        return data.subList((currentPage -1 ) * pageSize, Math.min(currentPage * pageSize, data.size()));
+        return data.subList((currentPage - 1) * pageSize, Math.min(currentPage * pageSize, data.size()));
     }
 
     @Override
